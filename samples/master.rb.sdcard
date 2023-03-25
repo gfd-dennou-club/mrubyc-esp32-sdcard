@@ -1,5 +1,5 @@
-if SDSPI.spi_bus_initialize(23, 19, 18) # Passing MOSI, MISO, CLOCK
-  if SDSPI.esp_vfs_fat_sdspi_mount(2, "/sdcard") # Passing ChipSelect, MountPoint
+if SDSPI.spi_bus_initialize(23, 19, 18) # Passing MOSI, MISO, CLOCK 
+  if SDSPI.esp_vfs_fat_sdspi_mount(2, "/sdcard") # Passing ChipSelect, MountPoint (if using M5stack Basic, please set 4 instead of 2)
     # TEST Deleting files, delete the file of given file name.
     ESP32_STDIO.remove("/sdcard/bar.txt")
     ESP32_STDIO.remove("/sdcard/piyo.txt")
